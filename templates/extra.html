@@ -1,0 +1,23 @@
+{% extends 'template.html' %}
+{% block content %}
+    {% block title %} Extra {% endblock %}
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-black text-uppercase" id="mainNav">
+        <div class="container"><a class="navbar-brand" href="#page-top">MARCoding</a><button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler text-white bg-dark navbar-toggler-right text-uppercase rounded" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ url_for('index') }}">Home</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<section id="extra" class="extra">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3">
+        <div class="col">
+            <div class="d-flex p-3">
+                <div class="px-2">
+                    <h5 class="mb-0 mt-1"><a href="{{ url_for('r6_track') }}">Extra Project's links</a></h5>
+                </div>
+            </div>
+        </div>
+</section>
+{% endblock %}

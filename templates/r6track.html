@@ -1,0 +1,25 @@
+{% extends 'template.html' %}
+{% block content %}
+    {% block title %} R6 {% endblock %}
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-black text-uppercase" id="mainNav">
+        <div class="container"><a class="navbar-brand" href="#page-top">MARCoding</a><button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler text-white bg-dark navbar-toggler-right text-uppercase rounded" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ url_for('index') }}">Home</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{{ url_for('extra') }}">Extra Project's links</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<section id="extra" class="extra">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3">
+      <ul>
+        <h3>Rainbow Six Siege Tracker App</h3>
+        <li>Username: {{data.user}}</li>
+        <li>Rank Tier: {{data.tier}}</li>
+        <li>MMR: {{data.mmr}}</li>
+        <li>KD: {{data.kd}}</li>
+      </ul>
+    </div>
+</section>
+{% endblock %}
